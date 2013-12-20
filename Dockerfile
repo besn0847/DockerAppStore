@@ -2,6 +2,10 @@ FROM ubuntu:12.04
 
 MAINTAINER Franck Besnard <franck@besnard.mobi>
 
+RUN apt-get install -y iputils-ping 
+RUN apt-get install -y net-tools
+RUN apt-get install -y openssh-server 
+
 RUN apt-get install -y python-software-properties
 RUN add-apt-repository -y ppa:webupd8team/java
 RUN apt-get update
